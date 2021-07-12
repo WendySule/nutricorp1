@@ -1,25 +1,43 @@
 import React from 'react';
-import {Form, Button} from 'react-bootstrap';
+import {Form} from 'react-bootstrap';
+import '../styles/loggin.css'
 
-export function loggin() {
+export function Loggin() {
+
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
+  const user = {
+    email: email,
+    password: password,
+  };
+
+const handleSubmit =(e)=>{
+    console.log(e);
+    console.log(user)
+  }
   return (
-<Form>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Correo</Form.Label>
-    <Form.Control type="email" placeholder="Correo electronico" />
+    <section className="container-center">
+      <img src="../assets/image/logo.png" className="logo" alt="logo" />
+<Form  className="xs" onSubmit={(e) => handleSubmit(e)}>
+  <Form.Group className="mb-3">
+    <Form.Control value={email}   onChange={(e) => setEmail(e.target.value)}
+    id="input-email" type="email" placeholder="Correo electronico" />
   </Form.Group>
 
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Contraseña</Form.Label>
-    <Form.Control type="password" placeholder="Contraseña" />
+  <Form.Group  className="mb-3" >
+    <Form.Control value={password}  onChange={(e) => setPassword(e.target.value)} id="input-password" type="password" placeholder="Contraseña" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Recuerdame" />
+    <Form.Check type="checkbox" id="red" label="Recuerdame" />
   </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
+  <section className="container-center">
+  <button className="button-red" type="submit">
+  Ingresar
+  </button >
+  </section>
 </Form>
+</section>
   )
 }
 
