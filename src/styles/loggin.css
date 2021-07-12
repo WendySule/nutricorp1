@@ -1,4 +1,9 @@
-#inputs{
+#input-email{
+  border: transparent;
+  border-bottom: 1px solid #999999;
+  margin:10px;
+}
+#input-password{
   border: transparent;
   border-bottom: 1px solid #999999;
   margin:10px;
