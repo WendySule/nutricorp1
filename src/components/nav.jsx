@@ -1,11 +1,16 @@
 import React from 'react'
 import {Nav} from 'react-bootstrap'
+import {Form} from 'react-bootstrap'
 
 function nav() {
-    
     return (
         <nav>   
         <>
+        <Form.Group>
+            <Form.Label></Form.Label>
+            <Form.Control type="search" placeholder="Busca un producto" />
+        </Form.Group>
+
         <Nav className="justify-content-center" activeKey="/home">
           <Nav.Item>
             <img  class="icons" src="assets/image/icon_aceites.png" alt="" />
