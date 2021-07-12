@@ -1,25 +1,29 @@
 import React from 'react';
-import {Form, Button} from 'react-bootstrap';
+import {Form} from 'react-bootstrap';
+import '../styles/loggin.css'
 
 export function loggin() {
   return (
-<Form>
+    <section class="container-center">
+      <img src="../assets/image/logo.png" class="logo" alt="logo" />
+<Form  className="xs">
   <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Correo</Form.Label>
-    <Form.Control type="email" placeholder="Correo electronico" />
+    <Form.Control  id="inputs" type="email" placeholder="Correo electronico" />
   </Form.Group>
 
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Contraseña</Form.Label>
-    <Form.Control type="password" placeholder="Contraseña" />
+  <Form.Group  className="mb-3" controlId="formBasicPassword">
+    <Form.Control id="inputs" type="password" placeholder="Contraseña" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Recuerdame" />
+    <Form.Check type="checkbox" id="red" label="Recuerdame" />
   </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
+  <section class="container-center">
+  <button class="button-red" type="submit">
+  Ingresar
+  </button >
+  </section>
 </Form>
+</section>
   )
 }
 
