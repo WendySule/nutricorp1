@@ -9,6 +9,30 @@
     height: 80px;
 }
 
+#formBasicSearch{
+
+    width: 350px;
+    border-color: #EDE7E7;
+    background-color: #EDE7E7; 
+}
+
+#inputSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDE7E7;
+    width: 400px;
+    border-radius: 40px;
+}
+
+#imgSearch{
+    width: 25px;
+    height: 25px;
+}
+
+#navProducts{
+    background-color: #EDE7E7;
+}
 nav{
     background-color:rgba(196, 196, 196, 0.6);
 }
