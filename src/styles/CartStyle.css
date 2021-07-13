@@ -1,0 +1,38 @@
+
+.bar{
+  background-color:RGB(220, 53, 69);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar2{
+  background-color:RGB(220, 53, 69);
+  padding-top: 16px;
+}
+
+.barText1{
+  color: white;
+  padding-right: 35px;
+  font-size: 17px;
+}
+
+.barText2{
+  color: white;
+  font-size: 17px;
+}
+
+.vector-icon{
+  padding-top: 10px;
+  padding-bottom: 16px;
+  padding-left: 25px;
+  width: 22px;
+}
+
+.balance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+}

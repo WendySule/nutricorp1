@@ -1,6 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Loggin from "./components/Loggin";
+import React from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Loggin from "./components/Loggin"
+import Cart from './components/Cart'
 // import {CardProduct} from './components/CardProduct'
 import DashboardScreen from "./components/HomeScreen";
 import HomeScreen from "./components/HomeScreen";
@@ -12,6 +13,7 @@ export const AppRouter = () => {
         <Route path={"/"} exact component={Loggin} />
         <Route path={"/home"} exact component={HomeScreen} />
         <Route path={"/dashboard"} exact component={DashboardScreen} />
+        <Route path={"/cart"} exact component={Cart} />
       </Switch>
     </Router>
   );
