@@ -1,21 +1,18 @@
-import React from "react";
+import React from 'react'
 import cart1 from '../assets/image/cart1.svg'
 import home from '../assets/image/home.svg'
 import cart2 from '../assets/image/cart1.svg'
 import logOut from '../assets/image/logOut.svg'
 import "../App.css"
 import { Nav, Navbar} from "react-bootstrap";
-// import { ReactComponent as Logo } from "./logo.svg";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
-export default function MenuName() {
-  return (
-    <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
+const MenuName = () => {
+    return (
+        <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
         <Navbar.Brand href="#home" >
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" class='nutriMarket' />
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" className='nutriMarket' />
         </Navbar.Brand>
-            <h3 class='nutriMarket'>Nutrimarket</h3>
+            <h3 className='nutriMarket'>Nutrimarket</h3>
 
         <Navbar.Brand href="#home">
             <img src={cart2}
@@ -65,5 +62,7 @@ export default function MenuName() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  );
+    )
 }
+
+export default MenuName
