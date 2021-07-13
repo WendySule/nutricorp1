@@ -6,11 +6,16 @@ function nav() {
     return (
         <nav>   
         <>
-        <Form.Group>
-            <Form.Label></Form.Label>
-            <Form.Control type="search" placeholder="Busca un producto" />
-        </Form.Group>
+        <section className="container-center">
+          <Form.Group controlId="formBasicSearch">
+            <div id="inputSearch">
+            <Form.Control type="text" placeholder="Encuentra tu producto aqui..." />
+            <img id="imgSearch" src="assets/image/Vector.png" alt="" />
+            </div>
+          </Form.Group>
+        </section>
 
+        <section className="container-center" id="navProducts">
         <Nav className="justify-content-center" activeKey="/home">
           <Nav.Item>
             <img  class="icons" src="assets/image/icon_aceites.png" alt="" />
@@ -33,6 +38,7 @@ function nav() {
             <Nav.Link eventKey="link-4">Jabones</Nav.Link>
           </Nav.Item>
         </Nav>
+        </section>
       </>   
       </nav>
     )

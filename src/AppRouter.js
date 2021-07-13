@@ -3,8 +3,13 @@ import {
     BrowserRouter as Router,
     Switch,
     Route} from 'react-router-dom';
-import {Loggin} from './components/loggin'
+// import {Loggin} from './components/loggin'
 import nav from './components/nav';
+import Loggin from './components/Loggin';
+// import {CardProduct} from './components/CardProduct'
+import DashboardScreen from './components/DashboardScreen';
+
+
 
 export const AppRouter = () => {
     return(
@@ -12,6 +17,7 @@ export const AppRouter = () => {
             <Switch>
                 <Route path={'/'} exact component={Loggin} />
                 <Route path={'/home'} exact component={nav} />
+                <Route path={'/dashboard'} exact component={DashboardScreen}/>
             </Switch>
         </Router>
     )
