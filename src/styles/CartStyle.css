@@ -36,3 +36,150 @@
     font-weight: bold;
     font-size: 17px;
 }
+
+
+/* estilos de cartContainer parte inferior */
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  border-radius: 10px;
+  margin: 18px;
+  padding: 10px;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 2px;
+  width: 45%;
+  height: 250px;
+}
+
+.card-img {
+  width: 60%;
+  height: 80%;
+}
+
+.card-section1 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+
+.card-section-sum {
+  display: flex;
+  gap: 3px;
+}
+
+
+.container-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  margin: 10px
+}
+
+.button-rad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: #EE3038;
+  padding: 2px;
+  border: none;
+
+}
+
+.title {
+  font-size: 20px;
+  margin: 5px 0px;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin: 0;
+}
+
+.trash-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.line{
+  background-color: black;
+  width: 325px;
+}
+
+.total-container{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 31px;
+  margin-bottom: 15px;
+}
+
+.pay{
+  padding-right: 8px;
+  margin-right: 28px;
+  font-weight: bold;
+}
+
+.pay1 {
+  padding-right: 8px;
+  margin-right: 28px;
+  font-weight: bold;
+  color: #EE3038;
+}
+
+.first-total{
+  size: 25px;
+  font-weight: bold;
+}
+
+.discount-total {
+  color: #EE3038;
+  size: 25px;
+  font-weight: bold;
+}
+
+.final-total {
+  size: 25px;
+  font-weight: bold;
+}
+
+.continue-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 108px;
+  margin-bottom: 35px;
+  
+
+}
+
+.continue{
+    width: 167px;
+    height: 31px;
+    background-color: #EE3038;
+    border-radius: 17px;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    padding-left: 52px;
+    padding-top: 7px;
+}
+
+
