@@ -4,7 +4,8 @@ import {
     Switch,
     Route} from 'react-router-dom';
 import Loggin from './components/Loggin';
-import {CardProduct} from './components/CardProduct'
+// import {CardProduct} from './components/CardProduct'
+import DashboardScreen from './components/DashboardScreen';
 
 
 export const AppRouter = () => {
@@ -12,7 +13,7 @@ export const AppRouter = () => {
         <Router>
             <Switch>
                 <Route path={'/'} exact component={Loggin} />
-                <Route path={'/dashboard'} exact component={CardProduct}/>
+                <Route path={'/dashboard'} exact component={DashboardScreen}/>
             </Switch>
         </Router>
     )
