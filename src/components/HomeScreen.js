@@ -7,16 +7,14 @@ import Navbar from "./Navbar";
 import "../styles/home.css";
 
 const HomeScreen = () => {
-  const [product, setProduct] = useState([]);
+  const [Allproduct, setAllProduct] = useState([]);
+  const [productFilter, setProductFilter] = useState([]);
   const [orderProduct, setOrderProduct] = useState([]);
 
 
   const bringProduct = () => {
-    getProducts(setProduct);
+    getProducts(setAllProduct);
   };
-  console.log(`hola order home `);
-  console.log(orderProduct);
-
 
   useEffect(() => {
     bringProduct();
@@ -25,9 +23,9 @@ const HomeScreen = () => {
   return (
     <>
       <MenuName />
-      <Navbar product={product}/>
+      <Navbar Allproduct={Allproduct} productFilter={productFilter} setProductFilter={setProductFilter}/>
       <main className="main-container">
-        {product.map((prod) => {
+        {productFilter.map((prod) => {
           return <CardProduct key={prod.id} prod={prod}  orderProduct={orderProduct} setOrderProduct={setOrderProduct}/>;
         })}
       </main>
