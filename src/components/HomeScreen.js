@@ -10,7 +10,6 @@ const HomeScreen = () => {
   const [product, setProduct] = useState([]);
   const [orderProduct, setOrderProduct] = useState([]);
 
-  
 
   const bringProduct = () => {
     getProducts(setProduct);

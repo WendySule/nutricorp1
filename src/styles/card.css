@@ -2,7 +2,7 @@
 .card-container{
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 90%;
   border-radius: 10px;
   border: solid 1px rgb(194, 185, 185);
   margin: 10px;
@@ -17,16 +17,25 @@
   width: 45%;
   height: 250px;
 }
+.card-sectionL{
+  width : 65%
+}
+.section-left{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
 
 .card-img{
   width: 60%;
   height: 80%;
 }
 
-.card-section1{
+.card-section-info{
   display: flex;
   flex-direction: column;
-  width: 60%; 
+  width: 100%;
 }
 
 
@@ -36,7 +45,7 @@
 }
 .button-red{
   border-radius: 15px;
-  width: 100%;
+  width: 90%;
   height: 40px;
   background-color:#EE3038;
   border: #EE3038;
@@ -45,7 +54,7 @@
 }
 .button-white{
   border-radius: 15px;
-  width: 100%;
+  width: 90%;
   height: 40px;
   background-color:white;
   border: 1px solid #EE3038;
@@ -73,12 +82,16 @@
   background-color: #EE3038 ;
   padding: 2px;
   border: none;
-  
 }
-
+.check{
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
 .title{
   font-size: 20px;
-  margin: 5px 0px; 
+  margin: 5px 0px;
+  font-weight: bold;
 }
 
 .subtitle{
