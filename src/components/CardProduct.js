@@ -34,8 +34,8 @@ export const CardProduct = ({ prod, orderProduct, setOrderProduct }) => {
           <h2 className="title">{prod.title}</h2>
           <p className="subtitle">{prod.product}</p>
           <p className="subtitle">Cantidad: {prod.quantity}</p>
-          <p className="subtitle">Precio:{prod.price} </p>
-          <p className="subtitle">Precio Sugerido: {prod.price + 10}</p>
+          <p className="subtitle">Precio: s/.{prod.price} </p>
+          <p className="subtitle">Precio Sugerido: s/.{prod.price + 10}</p>
           <div>
             <button className="button-red"
             >Agregar</button>
