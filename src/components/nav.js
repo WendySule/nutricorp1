@@ -1,9 +1,12 @@
 import React from 'react'
 import {Nav} from 'react-bootstrap'
 import {Form} from 'react-bootstrap'
+import MenuName from './MenuName'
 
 function nav() {
     return (
+      <div>
+        <MenuName/>
         <nav>   
         <>
         <section className="container-center">
@@ -41,6 +44,7 @@ function nav() {
         </section>
       </>   
       </nav>
+     </div> 
     )
     
 }

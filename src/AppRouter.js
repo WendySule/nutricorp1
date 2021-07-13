@@ -3,12 +3,10 @@ import {
     BrowserRouter as Router,
     Switch,
     Route} from 'react-router-dom';
-// import {Loggin} from './components/loggin'
-import nav from './components/nav';
 import Loggin from './components/Loggin';
 // import {CardProduct} from './components/CardProduct'
 import DashboardScreen from './components/DashboardScreen';
-
+import nav from './components/nav';
 
 
 export const AppRouter = () => {

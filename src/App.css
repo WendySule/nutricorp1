@@ -33,3 +33,18 @@
 #navProducts{
     background-color: #EDE7E7;
 }
+nav{
+    background-color:rgba(196, 196, 196, 0.6);
+}
+
+.nutriMarket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.welcome{
+    color: white;
+
+}
