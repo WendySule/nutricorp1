@@ -33,9 +33,6 @@
 #navProducts{
     background-color: #EDE7E7;
 }
-nav{
-    background-color:rgba(196, 196, 196, 0.6);
-}
 
 .nutriMarket{
     display: flex;
@@ -48,3 +45,48 @@ nav{
     color: white;
 
 }
+
+#chooseClient{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+#retro{
+    width: 20px;
+    height: 20px;
+    margin: 5%;
+}
+
+#iconI{
+    width: 20px;
+    height: 20px;
+}
+
+#codZona{
+    display: flex;
+}
+
+#barClient{
+    display: flex;
+    align-items: center;
+    background-color: #EE3037;
+    color: white;
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    padding-left: 10%;
+    padding-top: 2%;
+}
+
+#saldo{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#dataClient{
+    margin: 10%;
+    font-weight: bold;
+}
+

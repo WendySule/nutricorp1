@@ -7,6 +7,8 @@ import Loggin from './components/Loggin';
 // import {CardProduct} from './components/CardProduct'
 import DashboardScreen from './components/DashboardScreen';
 import nav from './components/nav';
+import Client from './components/Client';
+import OtherClient from './components/OtherClient';
 
 
 export const AppRouter = () => {
@@ -16,6 +18,8 @@ export const AppRouter = () => {
                 <Route path={'/'} exact component={Loggin} />
                 <Route path={'/home'} exact component={nav} />
                 <Route path={'/dashboard'} exact component={DashboardScreen}/>
+                <Route path={'/client'} exact component={Client}/>
+                <Route path={'/otherclient'} exact component={OtherClient}/>
             </Switch>
         </Router>
     )
