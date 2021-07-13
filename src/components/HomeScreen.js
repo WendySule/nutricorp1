@@ -10,10 +10,14 @@ const HomeScreen = () => {
   const [product, setProduct] = useState([]);
   const [orderProduct, setOrderProduct] = useState([]);
 
+  
+
   const bringProduct = () => {
     getProducts(setProduct);
   };
-  console.log(product);
+  console.log(`hola order home `);
+  console.log(orderProduct);
+
 
   useEffect(() => {
     bringProduct();
@@ -22,7 +26,7 @@ const HomeScreen = () => {
   return (
     <>
       <MenuName />
-      <Navbar />
+      <Navbar product={product}/>
       <main className="main-container">
         {product.map((prod) => {
           return <CardProduct key={prod.id} prod={prod}  orderProduct={orderProduct} setOrderProduct={setOrderProduct}/>;

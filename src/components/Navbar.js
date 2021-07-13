@@ -1,8 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import { Nav } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 
-const Navbar = () => {
+const Navbar = ({product}) => {
+  console.log(`hola navbar`);
+  console.log(product);
+  // const[filtercategory, setFilterCategory] = useState([])
+
+  // const ShowCategory = () => {
+
+  // }
+
   return (
     <div>
       <nav>
