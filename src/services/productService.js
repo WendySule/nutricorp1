@@ -7,6 +7,8 @@ export const getProducts = (cb) =>{
     .onSnapshot((querySnapshot)=>{
         const prod = []
          querySnapshot.docs.forEach((doc)=>{
+             
+            //  console.log(doc.id);
             prod.push({
                 ...doc.data()
             })
