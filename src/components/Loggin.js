@@ -39,7 +39,7 @@ const Loggin = ({ history }) => {
         } else {
           localStorage.removeItem("user");
         }
-        history.push("/dashboard");
+        history.push("/home");
       })
       .catch((error) => {
         console.log(error);

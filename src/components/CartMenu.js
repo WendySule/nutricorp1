@@ -1,28 +1,18 @@
 import React from 'react'
 import cart1 from '../assets/image/cart1.svg'
 import home from '../assets/image/home.svg'
-import cart2 from '../assets/image/cart1.svg'
 import logOut from '../assets/image/logOut.svg'
 import "../styles/MenuStyle.css"
 import { Nav, Navbar} from "react-bootstrap";
 
 const MenuName = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark" >
         <Navbar.Brand  >
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" className='nutriMarket' />
+            <Navbar.Toggle aria-controls="responsive-navbar-nav"  />
         </Navbar.Brand>
-            <h3 className='nutriMarket'>Nutrimarket</h3>
-
-        <Navbar.Brand href="/cart">
-            <img src={cart2}
-            alt="cart-icon"
-            width="30"
-            height="30"
-            className="cart-icon"
-            />
-        </Navbar.Brand>  
-
+            <h3 className='nutriMarketCart'>Nutrimarket</h3>
+  
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
             <h4 className='welcome'>¡Hola, Juan!</h4>

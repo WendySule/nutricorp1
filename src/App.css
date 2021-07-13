@@ -1,49 +1,50 @@
 .icons {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#icon_jabones{
-    width: 80px;
-    height: 80px;
+#icon_jabones {
+  width: 80px;
+  height: 80px;
 }
 
-#formBasicSearch{
-
-    width: 350px;
-    border-color: #EDE7E7;
-    background-color: #EDE7E7; 
+#formBasicSearch {
+  width: 350px;
+  border-color: #ede7e7;
+  background-color: #ede7e7;
 }
 
-#inputSearch{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EDE7E7;
-    width: 400px;
-    border-radius: 40px;
+#inputSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ede7e7;
+  width: 400px;
+  border-radius: 40px;
 }
 
-#imgSearch{
-    width: 25px;
-    height: 25px;
+#imgSearch {
+  width: 25px;
+  height: 25px;
 }
 
-#navProducts{
-    background-color: #EDE7E7;
+#container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 16px auto;
 }
 
-.nutriMarket{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+#navProducts {
+  background-color: #ede7e7;
+  margin: 0;
+  padding: 10px;
+  width: 100vw;
 }
-
-.welcome{
-    color: white;
-
+nav {
+  background-color: white;
 }
 
 #chooseClient{

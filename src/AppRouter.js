@@ -1,10 +1,9 @@
-import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route} from 'react-router-dom';
-import Loggin from './components/Loggin';
+import React from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Loggin from "./components/Loggin"
+import Cart from './components/Cart'
 // import {CardProduct} from './components/CardProduct'
+
 import DashboardScreen from './components/DashboardScreen';
 import nav from './components/nav';
 import Client from './components/Client';
@@ -19,9 +18,9 @@ export const AppRouter = () => {
                 <Route path={'/home'} exact component={nav} />
                 <Route path={'/dashboard'} exact component={DashboardScreen}/>
                 <Route path={'/client'} exact component={Client}/>
+                   <Route path={"/cart"} exact component={Cart} />
                 <Route path={'/otherclient'} exact component={OtherClient}/>
             </Switch>
         </Router>
     )
 }
-
