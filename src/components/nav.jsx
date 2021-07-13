@@ -1,9 +1,12 @@
 import React from 'react'
 import {Nav} from 'react-bootstrap'
 import {Form} from 'react-bootstrap'
+import MenuName from './MenuName'
 
 function nav() {
     return (
+      <div>
+        <MenuName/>
         <nav>   
         <>
         <Form.Group>
@@ -35,6 +38,7 @@ function nav() {
         </Nav>
       </>   
       </nav>
+     </div> 
     )
     
 }
