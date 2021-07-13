@@ -1,33 +1,48 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 
 import "../styles/card.css";
 
-export const CardProduct = ({ product }) => {
+export const CardProduct = ({ prod, orderProduct, setOrderProduct }) => {
+
+  const handleAdd = () =>{
+    console.log(`mas1`);
+  }
+
+  const handleRest = () =>{
+   console.log(`menojs 1 `);
+  }
+
 
   return (
-    <div>
-      {product.map((prod)=>(
-        <section className="card-container">
+    <>
+      <section className="card-container" key={prod.id}>
         <article className="card-section">
-          <img src={prod.img} alt="img"></img>
-          <div>
-            <p>+</p>
-            <p>qty</p>
-            <p>-</p>
+          <img className="card-img" src={prod.img} alt="img"></img>
+          <div className="card-section-sum">
+            <button 
+            className="button-rad"
+            onClick={handleAdd}
+            >+</button>
+            <p>0</p>
+            <button 
+            className="button-rad"
+            onClick={handleRest}
+            >-</button>
           </div>
         </article>
-        <article className="card-section">
-          <h2>{prod.product}</h2>
-          <p>Precio:{prod.price} </p>
-          <p>Precio Sugerido: {prod.price + 10}</p>
-  
-          <button className="button-red">Agregar</button>
-          <button className="button-white">Quitar</button>
+        <article className="card-section1">
+          <h2 className="title">{prod.title}</h2>
+          <p className="subtitle">{prod.product}</p>
+          <p className="subtitle">Cantidad: {prod.quantity}</p>
+          <p className="subtitle">Precio:{prod.price} </p>
+          <p className="subtitle">Precio Sugerido: {prod.price + 10}</p>
+          <div>
+            <button className="button-red"
+            >Agregar</button>
+            <button className="button-white">Quitar</button>
+          </div>
         </article>
       </section>
-      ))}
-    </div>
-
+    </>
   );
 };
