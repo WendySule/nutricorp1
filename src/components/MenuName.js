@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import cart1 from '../assets/image/cart1.svg'
 import home from '../assets/image/home.svg'
 import cart2 from '../assets/image/cart1.svg'
@@ -8,17 +8,34 @@ import { Nav, Navbar} from "react-bootstrap";
 import {fb}from '../environments/firebase-config'
 import 'firebase/auth'
 import { signOutAuth}from '../services/authService'
+import CartModal from './CartModal'
+import { Button } from 'react-bootstrap'
 
 
 const MenuName = (orderProduct) => {
     const currentUser =fb.auth().currentUser;
+    const [show, setShow] = useState(false);
+    const [fullscreen, setFullscreen] = useState(true);
+    const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
+    const handleClick = (breakpoint) => {
+        console.log('ir a modal');
+        setFullscreen (breakpoint) 
+        setShow (true)
+    }
     return (
         <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
         <Navbar.Brand  >
             <Navbar.Toggle aria-controls="responsive-navbar-nav" className='nutriMarket' />
         </Navbar.Brand>
             <h3 className='nutriMarket'>Nutrimarket</h3>
-        <Navbar.Brand href="/cart">
+        <Navbar.Brand >
+                {values.map((v, idx) => (
+                <Button key={idx} className="me-2" onClick={() => handleClick(v)}>
+                Full screen
+                {typeof v === 'string' && `below ${v.split('-')[0]}`}
+                </Button>
+                ))}
+            <CartModal show={show} fullscreen={fullscreen} setShow={setShow}/>
             { orderProduct.orderProduct.length ? (<p className="pop">{orderProduct.orderProduct.length}</p>) : ''}
             <img src={cart2}
             alt="cart-icon"
