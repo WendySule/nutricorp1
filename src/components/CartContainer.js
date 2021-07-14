@@ -1,12 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import vector from '../assets/image/vector.svg'
 import trash from '../assets/image/trash.svg'
 import "../styles/CartStyle.css"
-
+import {fb}from '../environments/firebase-config'
+import 'firebase/firestore'
 
 
 const CartContainer = () => {
 
+    // const [cart, setCart] = useState([])
+    // const theState = 'pending'
+
+    //     useEffect(() => {
+    //         let getData = fb.firestore().collection('product')
+    //         getData.orderBy('desc').onSnapshot((querySnapshot) => {
+    //             const docData = [];
+    //             querySnapshot.forEach((doc) => {
+    //                 docData.push({ id: doc.id, ...doc.data()});
+    //             })
+    //             setCart(docData.filter(e=> e.status === type));
+    //         })
+            
+    //     }, [])
+
+    //     const theState =(id, the)
+
+        // const theState =   fb.firestore().collection('product').doc(id).update({
+        //     status:
+        // })
+
+
+        
     return(
        <> 
         <section>

@@ -1,20 +1,24 @@
+
 #input-email{
+  width: 300px;
   border: transparent;
   border-bottom: 1px solid #999999;
-  margin:10px;
+  margin-left: 30px;
 }
 #input-password{
+  width: 300px;
   border: transparent;
   border-bottom: 1px solid #999999;
-  margin:10px;
+  margin-left: 30px;
 }
-.button-red{
-  border-radius: 15px;
-  width: 100%;
+.button-red1{
+  border-radius: 30px;
+  width: 80%;
   height: 40px;
-  background-color:#EE3038;
+  background-color: #EE3038;
   border: #EE3038;
-  color: white
+  color: white;
+  margin-left: 40px;
 }
 .container-center{
   display: flex;
@@ -26,9 +30,19 @@
   margin:10px
 }
 .logo{
-  height: 250px;
-  margin:25px;
+    height: 220px;
+    margin:25px;
+    margin-left: 58px;
 }
 .danger{
+  color: #EE3038;
+}
+
+.design {
+    width: 117.3%;
+}
+
+.remember{
+  margin-left: 42px;
   color: #EE3038;
 }

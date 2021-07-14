@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import { logInAuth } from "../services/authService";
+import logo from '../assets/image/logo.png'
+import design from '../assets/image/design.png'
 import "../styles/loggin.css";
 
 const emptyForm = {
@@ -59,7 +61,6 @@ const Loggin = ({ history }) => {
         setRemenber(true)
     }
     
-
   }
 
   useEffect(()=>{
@@ -69,7 +70,7 @@ const Loggin = ({ history }) => {
 
   return (
     <section className="container-center">
-      <img src="../assets/image/logo.png" className="logo" alt="logo" />
+      <img src={logo}className="logo" alt="logo" />
       <Form className="xs" onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Control
@@ -92,10 +93,10 @@ const Loggin = ({ history }) => {
             placeholder="Contraseña"
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check
+        <Form.Group className="mb-3"  controlId="formBasicCheckbox">
+          <Form.Check className='remember'
             type="checkbox"
-            label="Recuerdame"
+            label="Recuérdame"
             checked={remenber}
             onChange={handleCheck}
             //   name="remenber"
@@ -106,9 +107,12 @@ const Loggin = ({ history }) => {
           ) : null}
         </Form.Group>
         <section className="container-center">
-          <button className="button-red" type="submit">
+          <button className="button-red1" type="submit">
             Ingresar
           </button>
+          <section className='container-design'>
+            <img src={design}className="design" alt="design" />
+          </section>
         </section>
       </Form>
     </section>
