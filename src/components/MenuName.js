@@ -6,14 +6,15 @@ import logOut from '../assets/image/logOut.svg'
 import "../styles/MenuStyle.css"
 import { Nav, Navbar} from "react-bootstrap";
 
-const MenuName = () => {
+const MenuName = (orderProduct) => {
+    console.log(orderProduct)
     return (
         <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
         <Navbar.Brand  >
             <Navbar.Toggle aria-controls="responsive-navbar-nav" className='nutriMarket' />
         </Navbar.Brand>
             <h3 className='nutriMarket'>Nutrimarket</h3>
-
+            { orderProduct.orderProduct.length ? (<p className="pop">{orderProduct.orderProduct.length}</p>) : ''}
         <Navbar.Brand href="/cart">
             <img src={cart2}
             alt="cart-icon"
@@ -21,7 +22,7 @@ const MenuName = () => {
             height="30"
             className="cart-icon"
             />
-        </Navbar.Brand>  
+        </Navbar.Brand>
 
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
@@ -34,7 +35,7 @@ const MenuName = () => {
                 height="20"
                 className="cart-icon"
                 />
-                </Navbar.Brand>  
+                </Navbar.Brand>
                 Inicio</Nav.Link>
             </Nav>
         <Navbar.Collapse id="responsive-navbar-nav"></Navbar.Collapse>
@@ -47,7 +48,7 @@ const MenuName = () => {
                 height="20"
                 className="cart-icon"
                 />
-                </Navbar.Brand>  
+                </Navbar.Brand>
             Carrito de compras</Nav.Link>
             <Nav.Link href="/">
             <Navbar.Brand >
@@ -57,7 +58,7 @@ const MenuName = () => {
                 height="20"
                 className="cart-icon"
                 />
-            </Navbar.Brand>  
+            </Navbar.Brand>
             Cerrar sesión</Nav.Link>
         </Nav>
       </Navbar.Collapse>

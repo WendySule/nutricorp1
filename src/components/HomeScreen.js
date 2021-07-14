@@ -32,7 +32,9 @@ const HomeScreen = () => {
   }, []);
   return (
     <>
-      <MenuName />
+      <MenuName
+      orderProduct={orderProduct}
+        />
       <Navbar
       Allproduct={Allproduct}
       productFilter={productFilter}
