@@ -1,15 +1,26 @@
 
+.container-center1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 95.1%;
+  padding: 0px;
+  margin: -10px;
+}
+
 #input-email{
   width: 300px;
   border: transparent;
   border-bottom: 1px solid #999999;
-  margin-left: 30px;
+  margin-left: 53px;
 }
 #input-password{
   width: 300px;
   border: transparent;
   border-bottom: 1px solid #999999;
-  margin-left: 30px;
+  margin-left: 53px;
 }
 .button-red1{
   border-radius: 30px;
@@ -20,15 +31,7 @@
   color: white;
   margin-left: 40px;
 }
-.container-center{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90%;
-  width: 90%;
-  margin:10px
-}
+
 .logo{
     height: 220px;
     margin:25px;
@@ -43,6 +46,6 @@
 }
 
 .remember{
-  margin-left: 42px;
+  margin-left: 55px;
   color: #EE3038;
 }

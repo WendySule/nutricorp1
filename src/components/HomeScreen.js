@@ -31,6 +31,9 @@ const HomeScreen = () => {
           return <CardProduct key={prod.id} prod={prod}  orderProduct={orderProduct} setOrderProduct={setOrderProduct}/>;
         })}
       </main>
+      <footer className='the-footer'>
+      Saldo disponible  s/. 150.00
+      </footer>
     </>
   );
 };

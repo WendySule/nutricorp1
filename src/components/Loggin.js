@@ -69,7 +69,7 @@ const Loggin = ({ history }) => {
   },[])
 
   return (
-    <section className="container-center">
+    <section className="container-center1">
       <img src={logo}className="logo" alt="logo" />
       <Form className="xs" onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
