@@ -5,17 +5,21 @@ import cart2 from '../assets/image/cart1.svg'
 import logOut from '../assets/image/logOut.svg'
 import "../styles/MenuStyle.css"
 import { Nav, Navbar} from "react-bootstrap";
+import {fb}from '../environments/firebase-config'
+import 'firebase/auth'
+import { signOutAuth}from '../services/authService'
+
 
 const MenuName = (orderProduct) => {
-    console.log(orderProduct)
+    const currentUser =fb.auth().currentUser;
     return (
         <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
         <Navbar.Brand  >
             <Navbar.Toggle aria-controls="responsive-navbar-nav" className='nutriMarket' />
         </Navbar.Brand>
             <h3 className='nutriMarket'>Nutrimarket</h3>
-            { orderProduct.orderProduct.length ? (<p className="pop">{orderProduct.orderProduct.length}</p>) : ''}
         <Navbar.Brand href="/cart">
+            { orderProduct.orderProduct.length ? (<p className="pop">{orderProduct.orderProduct.length}</p>) : ''}
             <img src={cart2}
             alt="cart-icon"
             width="30"
@@ -26,7 +30,7 @@ const MenuName = (orderProduct) => {
 
         <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-            <h4 className='welcome'>¡Hola, Juan!</h4>
+            <h4 className='welcome'>¡Hola, {currentUser.displayName}!</h4>
                 <Nav.Link href="/home">
                 <Navbar.Brand >
                 <img src={home}
@@ -50,7 +54,7 @@ const MenuName = (orderProduct) => {
                 />
                 </Navbar.Brand>
             Carrito de compras</Nav.Link>
-            <Nav.Link href="/">
+            <Nav.Link onClick={signOutAuth} href="/">
             <Navbar.Brand >
                 <img src={logOut}
                 alt="cart-icon"
@@ -61,7 +65,7 @@ const MenuName = (orderProduct) => {
             </Navbar.Brand>
             Cerrar sesión</Nav.Link>
         </Nav>
-      </Navbar.Collapse>
+    </Navbar.Collapse>
     </Navbar>
     )
 }

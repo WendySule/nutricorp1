@@ -20,12 +20,18 @@
 }
 
 .pop{
+  position: absolute;
+  margin: 0;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   font-size: 15px;
-  color: black;
+  color: #EE3037;
+  font-weight: bold;
   background-color: white;
   border: 1px solid white;
+  text-align: center;
+  right: 24px;
+  top: 10px;
 }
 
