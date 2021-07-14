@@ -60,6 +60,9 @@ productFilter.map((prod) => {
       }
 
       </main>
+      <footer className='the-footer'>
+      Saldo disponible  s/. 150.00
+      </footer>
     </>
   );
 };

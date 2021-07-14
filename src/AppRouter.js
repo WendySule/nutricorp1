@@ -16,7 +16,7 @@ export const AppRouter = () => {
                 <Route path={'/'} exact component={Loggin} />
                 <Route path={'/home'} exact component={HomeScreen} />
                 <Route path={'/client'} exact component={Client}/>
-                <Route path={"/cart"} exact component={Cart} />
+                <Route path={'/cart'} exact component={Cart} />
                 <Route path={'/otherclient'} exact component={OtherClient}/>
             </Switch>
         </Router>

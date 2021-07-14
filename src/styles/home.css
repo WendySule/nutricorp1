@@ -7,3 +7,20 @@
     justify-content: center;
     align-items: center;
 }
+
+.the-footer {
+    position: fixed;
+    left: 0px;
+    bottom: -35px;
+    height: 109px;
+    width: 100%;
+    background-color: #EE3038;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 29px;
+    padding-bottom: 37px;
+}

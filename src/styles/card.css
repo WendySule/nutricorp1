@@ -1,5 +1,4 @@
-
-.card-container{
+.card-container {
   display: flex;
   align-items: center;
   width: 90%;
@@ -8,7 +7,8 @@
   margin: 10px;
   padding: 10px;
 }
-.card-section{
+
+.card-section {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -17,61 +17,66 @@
   width: 45%;
   height: 250px;
 }
-.card-sectionL{
-  width : 65%
+
+.card-sectionL {
+  width: 65%
 }
-.section-left{
+
+.section-left {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
 }
 
-.card-img{
+.card-img {
   width: 60%;
   height: 80%;
 }
 
-.card-section-info{
+.card-section-info {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 
-.card-section-sum{
+.card-section-sum {
   display: flex;
   gap: 3px;
 }
-.button-red{
+
+.button-red {
   border-radius: 15px;
   width: 90%;
   height: 40px;
-  background-color:#EE3038;
+  background-color: #EE3038;
   border: #EE3038;
   color: white;
   margin: 10px;
 }
-.button-white{
+
+.button-white {
   border-radius: 15px;
   width: 90%;
   height: 40px;
-  background-color:white;
+  background-color: white;
   border: 1px solid #EE3038;
   color: #EE3038;
-  margin:10px;
+  margin: 10px;
 }
-.container-center{
+
+.container-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90%;
   width: 90%;
-  margin:10px
+  margin: 10px
 }
 
-.button-rad{
+.button-rad {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,22 +84,24 @@
   height: 30px;
   border-radius: 50%;
   color: white;
-  background-color: #EE3038 ;
+  background-color: #EE3038;
   padding: 2px;
   border: none;
 }
-.check{
+
+.check {
   margin: 0;
   width: 30px;
   height: 30px;
 }
-.title{
+
+.title {
   font-size: 20px;
   margin: 5px 0px;
   font-weight: bold;
 }
 
-.subtitle{
+.subtitle {
   font-size: 16px;
   margin: 0;
 }
