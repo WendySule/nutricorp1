@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-
 import "../styles/card.css";
 
-export const CardProduct = ({ prod, orderProduct, setOrderProduct }) => {
-  const [quantity, setQuantity] = useState(0);
+export const CardProduct = ({ prod, orderProduct, getQuantity, setOrderProduct, quantity}) => {
+
 
   const handleAdd = (prop) => {
+    console.log(orderProduct)
     if (orderProduct.find((elem) => elem.id === prop.id)) {
       setOrderProduct = orderProduct.map((elem) => {
         let item;
@@ -23,17 +22,10 @@ export const CardProduct = ({ prod, orderProduct, setOrderProduct }) => {
       getQuantity(prop , "+");
     }
   };
-  const getQuantity = (prod, operateMat) => {
-    if (orderProduct.find((e) => e.id === prod.id)) {
-      setQuantity(orderProduct.find((e) => e.id === prod.id).qty);
-    } else if(operateMat==="+") {
-      setQuantity(1);
-    }else{
-      setQuantity(0)
-    }
-  };
+
 
   const handleRest = (prop) => {
+    console.log(orderProduct)
     const productIndex = orderProduct.findIndex((elem) => elem.id === prop.id);
 
     if (productIndex > -1) {
