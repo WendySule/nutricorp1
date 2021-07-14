@@ -21,7 +21,9 @@ export const CardProduct = ({ prod, orderProduct, getQuantity, setOrderProduct, 
       setOrderProduct([...orderProduct, { ...prop, qty: 1 }]);
       getQuantity(prop , "+");
     }
+    localStorage.setItem('order', JSON.stringify(orderProduct))
   };
+
 
 
   const handleRest = (prop) => {
@@ -41,12 +43,14 @@ export const CardProduct = ({ prod, orderProduct, getQuantity, setOrderProduct, 
       setOrderProduct(orderProduct);
       getQuantity(productToHandle, "");
     }
+    localStorage.setItem('order', JSON.stringify(orderProduct))
   };
   const handleDelete = (prop) =>{
     const index = orderProduct.findIndex((elem) => elem.id === prop.id);
         orderProduct.splice(index, 1);
         setOrderProduct(orderProduct);
       getQuantity(0, "");
+    localStorage.setItem('order', JSON.stringify(orderProduct))
   }
 
   return (
