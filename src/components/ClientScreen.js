@@ -3,8 +3,9 @@ import { Form } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import { getClients } from '../services/clientServices.js'
 import OtherClient from './OtherClient.js'
+import ClientNew from './ClientNew.js';
 
-function Client() {
+const ClientScreen = () => {
     const [otherClient, setOtherClient] = useState(false)
     const [listClient, setListClient] = useState([])
 
@@ -27,7 +28,7 @@ function Client() {
         getAllClients()
     }, [])
     return (
-        <div>
+        
             <div>
             <img id="retro" src="assets/image/icon_retro.png" alt="" />
             <p id="saldo"> Saldo disponible: S/50.00 </p>
@@ -60,36 +61,7 @@ function Client() {
                     ))}
                 </Form>
             </div>
-            <div id="dataClient">
-                <Form>
-                    <Form.Group >
-                        <Form.Label>Nombre</Form.Label>
-                        <Form.Control />
-                    </Form.Group>
-                    <Form.Group >
-                        <Form.Label>Código de trabajador</Form.Label>
-                        <Form.Control />
-                    </Form.Group>
-                    <Form.Group >
-                        <Form.Label>Código de zona</Form.Label>
-                        <Form.Control />
-                    </Form.Group>
-                </Form>
-
-                <div id="codZona">
-                    <img id="iconI" src="assets/image/icon_i.png"></img>
-                    <a href="https://portal.mtc.gob.pe/comunicaciones/autorizaciones/radiodifusion/documentos/1/CODIGOS%20DE%20AREA%20-%20PERU.pdf">Consultar el código de zona</a>
-                </div>
-
-                <section className="container-center">
-                    <p></p>
-                    <button className="button-red" type="submit">
-                        AGREGAR CLIENTE
-                    </button>
-                </section>
-            </div>
-            </div>
-
+            <ClientNew/>
             <div> 
               {otherClient?  <OtherClient listClient={listClient}/>: null
             }
@@ -100,4 +72,4 @@ function Client() {
     )
 }
 
-export default Client
+export default ClientScreen

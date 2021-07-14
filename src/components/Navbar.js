@@ -1,10 +1,9 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 import { Form } from "react-bootstrap";
+import "../styles/nav.css";
 
 const Navbar = ({Allproduct, setProductFilter, orderProduct, productFilter, setQuantity}) => {
-console.log(productFilter)
-  console.log(orderProduct, 'orderP1')
 
   const handleClick = (cat) =>{
     setProductFilter(Allproduct.filter((elem) => elem.category.includes(cat) === true))
@@ -20,11 +19,9 @@ console.log(productFilter)
     else{
     setProductFilter(Allproduct)
   }
-  console.log(orderProduct, 'orderP3')
   getQuantity()}
 
   const getQuantity = () => {
-    console.log(orderProduct, 'orderp4')
     productFilter.forEach((prod) => {
       if( orderProduct && orderProduct.find((e) => e.id === prod.id)){
         setQuantity(orderProduct.find((e) => e.id === prod.id).qty)
@@ -33,7 +30,6 @@ console.log(productFilter)
   }
 
   return (
-    <div>
       <nav>
         <section >
           <Form.Group controlId="formBasicSearch" id="container-center">
@@ -47,40 +43,52 @@ console.log(productFilter)
           </Form.Group>
         </section>
 
-        <section id="navProducts">
-          <Nav className="justify-content-center" activeKey="/home">
+
+          <Nav id="navProducts" activeKey="/home">
             <Nav.Item   >
-              <img className="icons" src="assets/image/icon_aceites.png" alt="icon" />
-              <h4 onClick={()=>handleClick('aceite')} >Aceites</h4>
+              <img
+              className="icons"
+              src="assets/image/icon_aceites.png"
+                alt="icon"
+                onClick={()=>handleClick('aceite')} />
+              <h4  className="text-m" >Aceites</h4>
             </Nav.Item>
             <Nav.Item>
-              <img className="icons" src="assets/image/icon_conservas.png" alt="icon" />
-              <h4 onClick={()=>handleClick('conservas')}>Conservas</h4>
+              <img
+              className="icons"
+              src="assets/image/icon_conservas.png"
+              alt="icon"
+              onClick={()=>handleClick('conservas')} />
+              <h4 className="text-m" >Conservas</h4>
             </Nav.Item>
             <Nav.Item>
-              <img className="icons" src="assets/image/icon_pastas.png" alt="icon" />
-              <h4 onClick={()=>handleClick('pastas')}>Pastas</h4>
+              <img
+              className="icons"
+              src="assets/image/icon_pastas.png"
+              alt="icon"
+              onClick={()=>handleClick('pastas')} />
+              <h4 className="text-m" >Pastas</h4>
             </Nav.Item>
             <Nav.Item>
               <img
                 className="icons"
                 src="assets/image/icon_detergentes.png"
                 alt="icon"
+                onClick={()=>handleClick('detergentes')}
               />
-              <h4 onClick={()=>handleClick('detergentes')}>Detergentes</h4>
+              <h4 className="text-m" >Detergentes</h4>
             </Nav.Item>
             <Nav.Item>
               <img
                 className="icons"
                 src="assets/image/icon_jabones.png"
                 alt="icon"
+                onClick={()=>handleClick('jabon')}
               />
-              <h4 onClick={()=>handleClick('jabon')}>Jabones</h4>
+              <h4 className="text-m" >Jabones</h4>
             </Nav.Item>
           </Nav>
-        </section>
       </nav>
-    </div>
   );
 };
 

@@ -3,5 +3,5 @@ import 'firebase/auth'
 
 export const logInAuth = (email, password) => fb.auth().signInWithEmailAndPassword(email,password)
 
-// export const signOutAuth = () => auth().signOut();
+export const signOutAuth = () => fb.auth().signOut() ;
 
