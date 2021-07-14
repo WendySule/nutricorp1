@@ -10,6 +10,17 @@ const HomeScreen = () => {
   const [Allproduct, setAllProduct] = useState([]);
   const [productFilter, setProductFilter] = useState([]);
   const [orderProduct, setOrderProduct] = useState([]);
+  const [quantity, setQuantity] = useState(0);
+
+  const getQuantity = (prod, operateMat) => {
+    if (orderProduct.find((e) => e.id === prod.id)) {
+      setQuantity(orderProduct.find((e) => e.id === prod.id).qty);
+    } else if(operateMat==="+") {
+      setQuantity(1);
+    }else{
+      setQuantity(0)
+    }
+  };
 
 
   const bringProduct = () => {
@@ -19,15 +30,35 @@ const HomeScreen = () => {
   useEffect(() => {
     bringProduct();
   }, []);
-
   return (
     <>
       <MenuName />
-      <Navbar Allproduct={Allproduct} productFilter={productFilter} setProductFilter={setProductFilter}/>
+      <Navbar
+      Allproduct={Allproduct}
+      productFilter={productFilter}
+      setProductFilter={setProductFilter}
+      setQuantity={setQuantity}
+      orderProduct={orderProduct} />
       <main className="main-container">
-        {productFilter.map((prod) => {
-          return <CardProduct key={prod.id} prod={prod}  orderProduct={orderProduct} setOrderProduct={setOrderProduct}/>;
-        })}
+        {
+  productFilter.length > 0 ?
+productFilter.map((prod) => {
+  return <CardProduct
+  key={prod.id}
+  prod={prod}
+  orderProduct={orderProduct}
+  setOrderProduct={setOrderProduct} getQuantity={getQuantity}
+  quantity={quantity}/>;
+}): Allproduct.map((prod) => {
+  return <CardProduct
+  key={prod.id}
+  prod={prod}
+  orderProduct={orderProduct}
+  setOrderProduct={setOrderProduct} getQuantity={getQuantity}
+  quantity={quantity}/>;
+})
+      }
+
       </main>
     </>
   );

@@ -2,10 +2,16 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 
-const Navbar = ({Allproduct, setProductFilter, productFilter}) => {
+const Navbar = ({Allproduct, setProductFilter, orderProduct, productFilter, setQuantity}) => {
+console.log(productFilter)
+  console.log(orderProduct, 'orderP1')
+
   const handleClick = (cat) =>{
     setProductFilter(Allproduct.filter((elem) => elem.category.includes(cat) === true))
+    console.log(orderProduct, 'orderP2')
+    getQuantity()
   }
+
   const handleChange = (e) =>{
     const value =e.target.value;
     if(value){
@@ -13,10 +19,18 @@ const Navbar = ({Allproduct, setProductFilter, productFilter}) => {
 
     else{
     setProductFilter(Allproduct)
-  }}
+  }
+  console.log(orderProduct, 'orderP3')
+  getQuantity()}
 
-  const getAllProducts = () => {
-    setProductFilter(Allproduct)}
+  const getQuantity = () => {
+    console.log(orderProduct, 'orderp4')
+    productFilter.forEach((prod) => {
+      if( orderProduct && orderProduct.find((e) => e.id === prod.id)){
+        setQuantity(orderProduct.find((e) => e.id === prod.id).qty)
+      }
+    })
+  }
 
   return (
     <div>
