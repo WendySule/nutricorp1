@@ -7,7 +7,8 @@ export const getClients = (callback) => {
         const cli = [];
         querySnapshot.docs.forEach((doc) => {
             cli.push({
-                ...doc.data()
+                ...doc.data(), 
+                id: doc.id
             })
         })
         console.log(cli);
@@ -15,13 +16,15 @@ export const getClients = (callback) => {
     })
 } 
 
-export const createClient = (dni, nombre, codigodezona, id, uidusuario) => {
+export const createClient = (dni, nombre, codigodezona, uidusuario) => {
     
     return fb.firestore().collection('client').add({
         dni,
         nombre,
         codigodezona,
-        id,
         uidusuario
     })
 }
+
+
+
